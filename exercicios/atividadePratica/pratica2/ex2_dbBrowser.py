@@ -4,7 +4,7 @@ from datetime import date
 
 # Database connection
 
-mydb = sqlite3.connect('bdcotacoes.db')
+mydb = sqlite3.connect('c:/Users/iagov/Downloads/pratica-una-2021-02-uc-sistemas-distribuidos/exercicios/atividadePratica/pratica2/bdcotacoes.db')
 cursor = mydb.cursor()
 
 # API Key Variables
