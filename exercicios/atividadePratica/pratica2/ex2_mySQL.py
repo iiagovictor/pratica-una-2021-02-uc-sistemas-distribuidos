@@ -5,7 +5,7 @@ from datetime import date
 # Conexão com banco de dados
 
 mydb = mysql.connector.connect(
-    host='localhost',
+    host='127.0.0.1',
     user='root', 
     password='Vh-Nkjv-g66-QZGvBc.qD-6KqEyHx..4U@MKhRVhf-vBdgEvH*',
     database='bdcotacoes')
