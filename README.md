@@ -26,7 +26,7 @@ Foram feitos os seguintes exercícios durante o decorrer desta UC, usando a ling
 </li>
 <li> Prática 3 | diretório "/exercicios/atividadePratica/pratica3"</li>
 <ul>
-<li>Criação de rotas com o micro-serviço 'Flask';</li>
+<li>Criação de rotas com micro-serviço 'Flask';</li>
 </ul>
 
 </ul>
