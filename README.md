@@ -29,4 +29,11 @@ Foram feitos os seguintes exercícios durante o decorrer desta UC, usando a ling
 <li>Criação de rotas com micro-serviço 'Flask';</li>
 </ul>
 
+</li>
+<li> Prática 4 | diretório "/exercicios/atividadePratica/pratica4"</li>
+<ul>
+<li>Criação de rotas com micro-serviço 'Flask' em Python, aplicando padrão de API REST;</li>
+<li>Utilização de método GET, POST, PUT e DELETE;</li>
+</ul>
+
 </ul>
