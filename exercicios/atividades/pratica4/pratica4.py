@@ -75,18 +75,18 @@ def inserir():
 
     if request.method == 'POST':
         dados = request.get_json()
-
+        data_criacao = date.today()
         descricao = dados['descricao']
-        ganhopercentual = dados['ganhopercentual']
-        datacriacao = date.today()
+        preco = dados['preco']
+        qtd = dados['qtd']
 
-        if descricao and ganhopercentual and datacriacao:
-            registro = (descricao, ganhopercentual, datacriacao)
+        if data_criacao and descricao and preco and qtd:
+            registro = (descricao, preco, qtd, data_criacao)
 
             try:
-                mydb = sqlite3.connect('database/db-loja.db')
+                mydb = sqlite3.connect('exercicios/atividades/pratica4/db-produtos-v2.db')
 
-                sql = 'INSERT INTO produtos(descricao, ganhopercentual, datacriacao) VALUES(?,?,?)'
+                sql = 'INSERT INTO produtos(descricao, preco, qtd, data_criacao) VALUES(?,?,?,?)'
                 cur = mydb.cursor()
                 cur.execute(sql, registro)
                 mydb.commit()
@@ -99,29 +99,29 @@ def inserir():
                 mydb.close()
 
     else:
-        return jsonify({'mensagem': 'campos <descricao> msg_error <ganhopercentual> sao obrigatorios'})
+        return jsonify({'mensagem': 'campos <descricao> msg_error <preco> sao obrigatorios'})
 
 # Método PUT
 
-@app.route('/api-loja/alterar', methods=['PUT'])
+@app.route('/produto/alterar', methods=['PUT'])
 
 def alterar():
 
     if request.method == 'PUT':
 
         dados = request.get_json()
-
+        data_atualizacao = date.today()
         descricao = dados['descricao']
-        ganhopercentual = dados['ganhopercentual']
-        idproduto = dados['idproduto']
+        preco = dados['preco']
+        id_produto = dados['id_produto']
 
-        if descricao and ganhopercentual and idproduto:
-            registro = (descricao, ganhopercentual, idproduto)
+        if data_atualizacao and descricao and preco and id_produto:
+            registro = (descricao, preco, data_atualizacao, id_produto)
 
             try:
-                mydb = sqlite3.connect('database/db-loja.db')
+                mydb = sqlite3.connect('exercicios/atividades/pratica4/db-produtos-v2.db')
 
-                sql = 'UPDATE produtos SET descricao=?, ganhopercentual=? WHERE idproduto = ?'
+                sql = 'UPDATE produtos SET descricao=?, preco=?, data_atualizacao=? WHERE id_produto=?'
                 cur = mydb.cursor()
                 cur.execute(sql, registro)
                 mydb.commit()
@@ -134,7 +134,7 @@ def alterar():
                 mydb.close()
 
     else:
-        return jsonify({'mensagem': 'campos <descricao>, <ganhopercentual> msg_error <idproduto> sao obrigatorios'})
+        return jsonify({'mensagem': 'campos <descricao>, <preco> msg_error <id_produto> sao obrigatorios'})
 
 
 # Método de rota não localizada
