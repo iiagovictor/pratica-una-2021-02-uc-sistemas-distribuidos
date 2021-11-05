@@ -36,4 +36,16 @@ Foram feitos os seguintes exercícios durante o decorrer desta UC, usando a ling
 <li>Utilização de método GET, POST, PUT e DELETE;</li>
 </ul>
 
+</li>
+<li> Prática 5, 6, 7 | feito direto na AWS</li>
+<ul>
+
+</ul>
+
+</li>
+<li> Prática 8 | diretório "/exercicios/atividadePratica/pratica8"</li>
+<ul>
+<li>Utilização do JWT, para acesso de dados com assinatura;</li>
+</ul>
+
 </ul>
