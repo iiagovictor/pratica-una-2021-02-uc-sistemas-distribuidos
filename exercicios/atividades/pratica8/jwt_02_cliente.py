@@ -4,7 +4,7 @@ endpoint1 = 'http://127.0.0.1:5000/auth'
 endpoint2 = 'http://127.0.0.1:5000/protect'
 
 
-credentials = {"user": "elsonabreu", "password": "12345"}
+credentials = {"user": "iago.cardoso", "password": "12345"}
 
 r = requests.post(url=endpoint1, json=credentials)
 

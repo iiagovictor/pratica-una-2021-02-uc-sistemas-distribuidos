@@ -15,7 +15,7 @@ def auth():
         user = request.json['user']
         password = request.json['password']
 
-        if user == 'elsonabreu' and password == '12345':
+        if user == 'iago.cardoso' and password == '12345':
             token = jwt_lib_api.create_token(user, 5, app.config['SECRET_KEY'])
 
     return jsonify({"token": str(token)}),200
